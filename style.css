@@ -651,11 +651,12 @@ max-width: 100%;
     font-weight: 300;
 }
 .tbox{
-  padding: 0.2em 6em;
+  padding: 0.2em 0em;
    display: flex;
    align-items: stretch;
    justify-content: center;
    max-width: 850px;
+  
    gap: 1px;
    
 }
@@ -695,9 +696,7 @@ max-width: 100%;
  margin-right: 2em; 
  max-height: 170px;
 }
-.tbox img{
 
-}
 .tbox #one, #two {
     margin-bottom: 0.3rem;
     font-family: "Amatic SC",  sans-serif ;
@@ -725,6 +724,8 @@ max-width: 100%;
 .circle{
     display: flex;
     gap: 7px;
+    justify-content: center;
+    align-items: center;
     
 }
 .round{
@@ -735,55 +736,298 @@ max-width: 100%;
     border-radius: 50%;
 }
 
-@media (min-width:500px) and (max-width:989px){
+@media (min-width:1010px) and (max-width:1190px){
     
+    .writing{
+         max-width: 400px;
+         min-width: 400px;
+    }
+}
+
+@media (min-width:768px) and (max-width:1009px){
     .tbox{
-        background-color: yellow;
-            position: relative;
-        display: flex;
+        padding: 0.6em 2em;
+        display:flex;
+        
         flex-direction: column;
-        align-items: stretch;
-        max-width: 500px;
-        padding-left: 3em;
+        
     }
 
-    .line{
-    
-    box-sizing: border-box;
-    min-width: 5px;
-    background-color: #ce1212;
+    .writing{
+         max-width: 500px;
+         min-width: 649px;
+         line-height: 2;
+    }
+
+    .star{
+        padding-bottom: 2em;
+    }
+    .tbox img{
+        max-width: 450px;
+        max-height: 450px;
+        margin-left:6em ;
+    }
 }
+
+@media (min-width:365px) and (max-width:767px){
+     .tbox{
+        display: flex;
+        flex-direction: column;
+        padding: 0em 0em;
+        
+     }
 .tbox img{
-    max-width: 400px;
-    max-height: 400px;
-    margin-left: 5em;
+        max-width: 450px;
+        max-height: 450px;
+        margin-left:3em ;
+    }
+}
+
+/*events*/
+
+.events{
+   
+    padding: 4em 0em;
+}
+.EVENTS{
+     display: flex;
+    flex-direction: row;
+    gap: 3px;
+}
+.first-event{
+    position: relative;
+    width: 452px;
+    height: 690px;
+    overflow: hidden;
+}
+
+.first-event img{
+    position: absolute;
+    height: 100%;
+    object-fit: cover;
+}
+
+.first-event p{
+    width: 390px;
+     padding-bottom: 0.5em;
+     line-height: 1.6;
+     color: #f2f2f2;
+}
+
+
+.first-event h1{
+    font-size: 2rem;
+     padding-bottom: 1rem;
+}
+
+.first-event h1::after{
+    content: "";
+ border-radius: 2px;
+ height: 3px;
+ width:80px;
+ background:#ce1212;
+ display:block ;
+ position: absolute;
+ bottom: px;
+ 
+}
+.first-event h2{
+    font-family:"Amatic SC",  sans-serif ;
+    font-size: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+.first-event .text{
+    position: absolute;
+    color: white;
+    inset: 0;
+    padding-top: 28em; 
+    padding-left: 1.3em;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.circle2{
+    display: flex;
+    gap: 7px;
+    padding-top: 1em;
     justify-content: center;
+    align-items: center;
+    
 }
-.writing{
-    max-width: 1050px;
-}
-.circle{
-    margin-left: 60px;
-    margin-top: 20px;
+.rounds{
+    width: 13px;
+    height: 13px;
+    box-sizing: border-box;
+    background-color:#c9c6c6;
+    border-radius: 50%;
 }
 
+@media (min-width:300px) and (max-width:1190px){
+    .first-event{
+        width: 100%;
+    }
+    .EVENTS{
+        flex-direction: column;
+    }
+
+    .first-event img{
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+   }
+
+   .first-event p{
+    width: 100%;
+     padding-bottom: 0.5em;
+     line-height: 1.6;
+     color: #f2f2f2;
+}
 }
 
+/*CHEFS*/
+.chefsection{
+    padding: 3em 0em;
+}
 
-@media (min-width:990px) and (max-width:1200px){
-  
-  .writing{
-    max-width: 400px;
-  }
-  .tbox{
+.chefsection h1{
+     text-align: center;
+    margin-bottom: 2.6em;
+    color: #7f7f90;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+.chefsection h2{
+    margin-bottom: 1.4em;
+    text-align: center;
+    font-family: "Amatic SC",  sans-serif ;
+    font-size: 3rem;
+    color: #37373f;
+    line-height: 1cm;
+    font-weight: 300;
+}
+
+.chefs{
+    display: flex;
     gap: 30px;
-    background-color: blue;
-  }
-  .tbox img{
-    max-width: 130px;
-    max-height: 130px;
-  }
+    padding: 0em 7em;
+  transition: all 0.3s ease;
+}
+.chef-card{
+    border-radius: 10px;
+    width: 700px;
+    box-shadow:0px 2px 30px 0px rgba(0, 0, 0, 0.1);
+}
+
+.chef-cardimg{
+    position: relative;
+    
 }
 
 
+.wave{
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 120px;
+}
+.chef-card img{
+    border-radius: 10px;
+    width: 100%;
+    display: block;
 
+}
+.wave{
+    position: absolute;
+    height: 60px;
+    bottom: -1px;
+    width: 100%;
+    display: block;
+}
+
+.chef-card h3 ,h4{
+   
+    text-align: center;
+}
+.chef-card h3{
+    font-size: 1.4em;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    color: #37373f;
+}
+.chef-card h4{
+    color: #8A8A99;
+    font-weight: 400;
+    padding-bottom: 1rem;
+}
+
+.chef-card p{
+    justify-content: center;
+    padding-bottom: 3em;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: 400;
+    line-height: 1.8;
+    font-style: italic;
+    color:#595966;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+@media (min-width:990px) and (max-width:1280px){
+     .chefs{
+        padding:0em 3em ;
+     }
+
+}
+@media (min-width:799px) and (max-width:989px){
+     .chefs{
+    padding: 0em 10em;
+     display: flex;
+    flex-direction: column;
+   }
+
+   .chef-card{
+        width: 100%;
+      }
+    .chef-card img{
+        width: 100%;
+        
+      }
+
+
+}
+
+
+@media (min-width:701px) and (max-width:800px){
+   .chefs{
+    padding: 0em 5.5em;
+     display: flex;
+    flex-direction: column;
+   }
+
+   .chef-card{
+        width: 100%;
+      }
+    .chef-card img{
+        width: 100%;
+      }
+
+}
+
+@media(min-width:300px) and (max-width:700px){
+      .chefs{
+        display: flex;
+        flex-direction: column;
+        padding: 0em 2em;
+      }
+
+      .chef-card{
+        width: 100%;
+      }
+      .chef-card img{
+        width: 100%;
+      }
+
+}
